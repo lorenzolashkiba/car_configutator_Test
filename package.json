@@ -1,9 +1,10 @@
 {
   "name": "carconfigurator_pug",
   "version": "1.0.0",
-  "description": "",
-  "main": "js.js",
+  "description": "A car configurator application using Express and Pug",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
