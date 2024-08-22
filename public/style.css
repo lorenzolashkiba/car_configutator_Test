@@ -1,0 +1,136 @@
+body, html {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .car {
+    margin-top: 5em;
+    min-width: 40em;
+    width: 70%;
+    max-width: 1200px;
+  }
+  .color_list {
+    display: grid;
+    grid-template-rows: repeat(6, 3em);
+    grid-gap: 1em;
+    list-style: none;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#pullbarButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #1E88E5; /* Primary button color */
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#pullbarButton:hover {
+  background-color: #1565C0; /* Darker shade on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+#pullbarButton:active {
+  background-color: #0D47A1; /* Even darker shade on click */
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+    .color_list {
+        grid-template-columns: repeat(6, minmax(3em, 1fr)); /* Make columns flexible */
+        grid-template-rows: none; /* Remove row configuration */
+        grid-gap: 0.5em; /* Adjust gap for small screens */
+
+        position: fixed; /* Fix the position at the bottom */
+        bottom: 0;
+        top: auto;
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center the grid exactly */
+        width: 100%; /* Use full width of the screen */
+        padding: 0 1em; /* Add padding to prevent squishing */
+        box-sizing: border-box; /* Ensure padding doesn't affect element size */
+    }
+}
+
+.color {
+    width: 3em;
+    height: 3em; /* Ensure circles maintain their shape */
+    border-radius: 50%;
+}
+
+.color:nth-child(2) {
+    background: #1E88E5;
+}
+
+.color:nth-child(3) {
+    background: #CFD8DC;
+}
+
+.color:nth-child(4) {
+    background: #FFD600;
+}
+
+.color:nth-child(5) {
+    background: #FF1744;
+}
+
+.color:nth-child(6) {
+    background: #64DD17;
+}
+
+  .calc {
+    display: grid;
+    justify-content: start;
+    grid-template-rows: 4em 1em .1em .1em 1.5em;
+    grid-gap: 2em;
+    margin-top: 3em;
+    margin-right: 1em;
+    width: 10em;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .calc_item:nth-child(3), .calc_item:nth-child(4) {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #43A047;
+  }
+  .buy {
+    width: 5em;
+    margin-left: calc(50% - 2.5em);
+    border-radius: 1em;
+    background: #1E88E5;
+    color: #fff;
+  }
+  .config {
+    border: 3px solid lightgrey;
+    display: grid;
+    grid-template-columns: repeat(3,30%);
+    justify-content: end;
+    padding-bottom: .5em;
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+  }
+  .config_col {
+    display: grid;
+  }
+  .config_col h4 {
+    justify-self: start;
+    margin: .5em 0;
+  }
+  .label {
+    justify-self: start;
+    
+  }
